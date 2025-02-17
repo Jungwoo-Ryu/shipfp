@@ -1,0 +1,25 @@
+name: shipfp
+description: A Flutter app for INFPs in the 16 personalities framework, featuring daily questions and XP tracking.
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.17.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/ # Add your asset paths here if you have any images or other assets.
+

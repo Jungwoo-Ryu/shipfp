@@ -1,18 +1,56 @@
-# shipfp
+# ShipFP
 
-A new Flutter project.
+ShipFP is a Flutter application designed specifically for INFPs, inspired by the 16 Personalities framework. The app aims to create a supportive environment for users to engage with daily questions that resonate with their personality type, fostering self-reflection and personal growth.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- **Guest Login**: Users can start using the app without creating an account.
+- **Daily Questions**: The app presents daily questions tailored for INFPs, encouraging introspection and engagement.
+- **XP Display**: Users can track their experience points (XP) as they interact with the app.
 
-A few resources to get you started if this is your first Flutter project:
+## Project Structure
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+```
+shipfp
+├── lib
+│   ├── main.dart                # Entry point of the application
+│   ├── screens
+│   │   └── main_page.dart       # Main interface of the app
+│   ├── widgets
+│   │   └── question_widget.dart  # Widget for rendering questions
+│   └── models
+│       └── question.dart        # Model for question data
+├── pubspec.yaml                 # Project configuration file
+└── README.md                    # Documentation for the project
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# shipfp
-# shipfp
+## Setup Instructions
+
+1. Clone the repository:
+   ```
+   git clone https://github.com/yourusername/shipfp.git
+   ```
+2. Navigate to the project directory:
+   ```
+   cd shipfp
+   ```
+3. Install the dependencies:
+   ```
+   flutter pub get
+   ```
+4. Run the application:
+   ```
+   flutter run
+   ```
+
+## Usage
+
+Upon launching the app, users will be greeted with a guest login option. After logging in, they will see the main page featuring their XP and a daily question. Users can interact with the questions and track their progress through the XP system.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a pull request or open an issue for any suggestions or improvements.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
