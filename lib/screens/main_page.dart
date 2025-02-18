@@ -10,6 +10,7 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   int xp = 0;
   int _selectedIndex = 0;
+  String selectedMood = '🙂'; // Default mood
   Question dailyQuestion = Question(
     text: "What is one thing you are grateful for today?",
   );
@@ -23,6 +24,12 @@ class _MainPageState extends State<MainPage> {
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
+    });
+  }
+
+  void _selectMood(String mood) {
+    setState(() {
+      selectedMood = mood;
     });
   }
 
@@ -48,8 +55,23 @@ class _MainPageState extends State<MainPage> {
           },
         ),
         actions: [
+          PopupMenuButton<String>(
+            icon: Text(
+              selectedMood,
+              style: TextStyle(fontSize: 24),
+            ),
+            onSelected: _selectMood,
+            itemBuilder: (BuildContext context) {
+              return {'😢', '😍', '😟', '😊'}.map((String choice) {
+                return PopupMenuItem<String>(
+                  value: choice,
+                  child: Text(choice, style: TextStyle(fontSize: 24)),
+                );
+              }).toList();
+            },
+          ),
           IconButton(
-            icon: Icon(Icons.notifications, color: Colors.white),
+            icon: Icon(Icons.notifications, color: const Color.fromARGB(255, 210, 90, 90)),
             onPressed: () {
               // Handle notifications action
             },
